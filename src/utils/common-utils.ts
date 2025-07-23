@@ -2,9 +2,9 @@ export function slugify(input?: string) {
     if (!input) return '';
 
     // make lower case and trim
-    var slug = input.toLowerCase().trim();
+    let slug = input.toLowerCase().trim();
 
-    // remove accents from charaters
+    // remove accents from characters
     slug = slug.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
     // replace invalid chars with spaces
