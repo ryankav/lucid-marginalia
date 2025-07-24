@@ -8,6 +8,12 @@
         "preview": "astro preview",
         "deploy": "wrangler deploy"
     },
+    "devEngines": {
+        "packageManager": {
+            "name": "pnpm",
+            "onFail": "error"
+        }
+    },
     "dependencies": {
         "@astrojs/mdx": "^4.2.3",
         "@astrojs/rss": "^4.0.11",
