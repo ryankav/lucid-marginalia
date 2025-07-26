@@ -10,13 +10,6 @@ export type Link = {
     icon?: string;
 };
 
-export type Hero = {
-    title?: string;
-    text?: string;
-    image?: Image;
-    actions?: Link[];
-};
-
 export type SiteConfig = {
     website: string;
     logo?: Image;
@@ -27,7 +20,6 @@ export type SiteConfig = {
     headerNavLinks?: Link[];
     footerNavLinks?: Link[];
     socialLinks?: Link[];
-    hero?: Hero;
     postsPerPage?: number;
     projectsPerPage?: number;
 };
@@ -35,7 +27,7 @@ export type SiteConfig = {
 const siteConfig: SiteConfig = {
     website: 'https://lucidmarginalia.com',
     title: 'Lucid Marginalia',
-    subtitle: 'Margo qui demonstrationem mirabilem cepisset',
+    subtitle: 'Margo qui demonstrationem mirabilem cepisset',
     description: 'Personal blogging site of Ryan Kavanagh. A place where I can leave my thoughts in the margin of human history',
     headerNavLinks: [
         {
@@ -61,10 +53,6 @@ const siteConfig: SiteConfig = {
             href: '/about'
         },
         {
-            text: 'Contact',
-            href: '/contact'
-        },
-        {
             text: 'Download theme',
             href: 'https://github.com/JustGoodUI/dante-astro-theme'
         }
@@ -75,16 +63,6 @@ const siteConfig: SiteConfig = {
             icon: 'fab fa-github'
         }
     ],
-    hero: {
-        title: 'Hi There & Welcome to My Corner of the Web!',
-        text: "I'm **Ethan Donovan**, a web developer at Amazing Studio, dedicated to the realms of collaboration and artificial intelligence. My approach involves embracing intuition, conducting just enough research, and leveraging aesthetics as a catalyst for exceptional products. I have a profound appreciation for top-notch software, visual design, and the principles of product-led growth. Feel free to explore some of my coding endeavors on <a href='https://github.com/JustGoodUI/dante-astro-theme'>GitHub</a> or follow me on <a href='https://twitter.com/justgoodui'>Twitter/X</a>.",
-        actions: [
-            {
-                text: 'Get in Touch',
-                href: '/contact'
-            }
-        ]
-    },
     postsPerPage: 8,
     projectsPerPage: 8
 };
