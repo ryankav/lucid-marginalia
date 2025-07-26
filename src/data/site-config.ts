@@ -5,8 +5,9 @@ export type Image = {
 };
 
 export type Link = {
-    text: string;
+    text?: string;
     href: string;
+    icon?: string;
 };
 
 export type Hero = {
@@ -70,16 +71,8 @@ const siteConfig: SiteConfig = {
     ],
     socialLinks: [
         {
-            text: 'Dribbble',
-            href: 'https://dribbble.com/'
-        },
-        {
-            text: 'Instagram',
-            href: 'https://instagram.com/'
-        },
-        {
-            text: 'X/Twitter',
-            href: 'https://twitter.com/'
+            href: 'https://github.com/ryankav',
+            icon: 'fab fa-github'
         }
     ],
     hero: {
