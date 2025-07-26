@@ -4,6 +4,7 @@ import ThemeToggle from './ThemeToggle.astro';
 import siteConfig from '../data/site-config';
 
 const navLinks = siteConfig.headerNavLinks || [];
+const socialLinks = siteConfig.socialLinks || [];
 ---
 
 <nav class="min-h-10 pt-4 pb-12 relative sm:min-h-14 sm:pb-24 md:pt-8">
@@ -36,7 +37,25 @@ const navLinks = siteConfig.headerNavLinks || [];
             </div>
         )
     }
-    <div class="absolute right-0 top-4 z-10 md:top-8">
+    <div class="absolute right-0 top-4 z-10 md:top-8 flex items-center gap-4">
+        {
+            socialLinks.length > 0 && (
+                <div class="flex gap-2">
+                    {socialLinks.map((link) => (
+                        <a
+                            class="inline-flex items-center justify-center p-2 text-main hover:underline hover:underline-offset-2"
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferer"
+                            aria-label={link.text || 'Social link'}
+                        >
+                            {link.icon && <i class={link.icon + ' text-lg'} />}
+                            {link.text && <span>{link.text}</span>}
+                        </a>
+                    ))}
+                </div>
+            )
+        }
         <ThemeToggle />
     </div>
 </nav>
