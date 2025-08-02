@@ -38,10 +38,10 @@ const siteConfig: SiteConfig = {
             text: 'Blog',
             href: '/blog'
         },
-        {
-            text: 'Projects',
-            href: '/projects'
-        },
+        //{
+        //    text: 'Projects',
+        //    href: '/projects'
+        //},
         {
             text: 'Tags',
             href: '/tags'
